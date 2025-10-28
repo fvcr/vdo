@@ -3,7 +3,7 @@
 
 Summary: Management tools for Virtual Data Optimizer
 Name: vdo
-Version: 8.3.1.1
+Version: 8.3.2.1
 Release: %{spec_release}%{?dist}
 
 License: GPL-2.0-only
@@ -65,6 +65,7 @@ make install DESTDIR=$RPM_BUILD_ROOT INSTALLOWNER= name=%{name} bindir=%{_bindir
 
 %files
 %license COPYING
+%{_bindir}/vdocalculatesize
 %{_bindir}/vdoforcerebuild
 %{_bindir}/vdoformat
 %{_bindir}/vdostats
@@ -75,6 +76,7 @@ make install DESTDIR=$RPM_BUILD_ROOT INSTALLOWNER= name=%{name} bindir=%{_bindir
 %doc %{_defaultdocdir}/%{name}/examples/monitor/monitor_check_vdostats_logicalSpace.pl
 %doc %{_defaultdocdir}/%{name}/examples/monitor/monitor_check_vdostats_physicalSpace.pl
 %doc %{_defaultdocdir}/%{name}/examples/monitor/monitor_check_vdostats_savingPercent.pl
+%{_mandir}/man8/vdocalculatesize.8*
 %{_mandir}/man8/vdoforcerebuild.8*
 %{_mandir}/man8/vdoformat.8*
 %{_mandir}/man8/vdostats.8*
@@ -98,5 +100,5 @@ make install DESTDIR=$RPM_BUILD_ROOT INSTALLOWNER= name=%{name} bindir=%{_bindir
 %{_mandir}/man8/vdorecover.8*
 
 %changelog
-* Thu Mar 13 2025 - Red Hat VDO Team <dm-devel@lists.linux.dev> - 8.3.1.1-1
+* Wed Oct 29 2025 - Red Hat VDO Team <dm-devel@lists.linux.dev> - 8.3.2.1-1
 - See https://github.com/dm-vdo/vdo.git

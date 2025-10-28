@@ -17,7 +17,7 @@
 # 02110-1301, USA.
 #
 
-VDO_VERSION = 8.3.1.1
+VDO_VERSION = 8.3.2.1
 
 UDS_DIR      = ../uds
 
@@ -98,6 +98,7 @@ DEPLIBS  = $(UDS_DIR)/libuds.a
 LIBFLAGS = -pthread -lrt
 
 PROGS = vdoaudit         \
+        vdocalculatesize \
         vdodebugmetadata \
         vdodumpblockmap  \
         vdodumpmetadata  \
